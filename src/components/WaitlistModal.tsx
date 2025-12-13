@@ -1,6 +1,7 @@
 import React, { useState } from 'react';
 import { X, CheckCircle, Loader2 } from 'lucide-react';
 import { supabase } from '../lib/supabase';
+import { countryCodes } from '../lib/countryCodes';
 
 interface WaitlistModalProps {
     isOpen: boolean;
@@ -12,6 +13,8 @@ const WaitlistModal: React.FC<WaitlistModalProps> = ({ isOpen, onClose, type }) 
     const [email, setEmail] = useState('');
     const [company, setCompany] = useState('');
     const [country, setCountry] = useState('');
+    const [phoneNumber, setPhoneNumber] = useState('');
+    const [countryCode, setCountryCode] = useState(countryCodes[0].code);
     const [userType, setUserType] = useState<'buyer' | 'supplier'>(type || 'buyer');
     const [status, setStatus] = useState<'idle' | 'loading' | 'success' | 'error'>('idle');
     const [errorMessage, setErrorMessage] = useState('');
@@ -36,7 +39,13 @@ const WaitlistModal: React.FC<WaitlistModalProps> = ({ isOpen, onClose, type }) 
             const { error } = await supabase
                 .from('waitlist')
                 .insert([
-                    { email, company_name: company, country, user_type: userType }
+                    {
+                        email,
+                        company_name: company,
+                        country,
+                        user_type: userType,
+                        phone: `${countryCode} ${phoneNumber}`
+                    }
                 ]);
 
             if (error) throw error;
@@ -48,6 +57,7 @@ const WaitlistModal: React.FC<WaitlistModalProps> = ({ isOpen, onClose, type }) 
                 setEmail('');
                 setCompany('');
                 setCountry('');
+                setPhoneNumber('');
             }, 3000); // Close after 3 seconds on success
 
         } catch (err: any) {
@@ -62,6 +72,7 @@ const WaitlistModal: React.FC<WaitlistModalProps> = ({ isOpen, onClose, type }) 
                     setEmail('');
                     setCompany('');
                     setCountry('');
+                    setPhoneNumber('');
                 }, 3000);
             } else {
                 setStatus('error');
@@ -107,8 +118,8 @@ const WaitlistModal: React.FC<WaitlistModalProps> = ({ isOpen, onClose, type }) 
                                         type="button"
                                         onClick={() => setUserType('buyer')}
                                         className={`nav-btn py-2 text-sm font-medium rounded-md transition-all ${userType === 'buyer'
-                                                ? 'bg-white text-pelagos-900 shadow-sm'
-                                                : 'text-gray-500 hover:text-gray-700'
+                                            ? 'bg-white text-pelagos-900 shadow-sm'
+                                            : 'text-gray-500 hover:text-gray-700'
                                             }`}
                                     >
                                         I'm a Buyer
@@ -117,8 +128,8 @@ const WaitlistModal: React.FC<WaitlistModalProps> = ({ isOpen, onClose, type }) 
                                         type="button"
                                         onClick={() => setUserType('supplier')}
                                         className={`nav-btn py-2 text-sm font-medium rounded-md transition-all ${userType === 'supplier'
-                                                ? 'bg-white text-pelagos-900 shadow-sm'
-                                                : 'text-gray-500 hover:text-gray-700'
+                                            ? 'bg-white text-pelagos-900 shadow-sm'
+                                            : 'text-gray-500 hover:text-gray-700'
                                             }`}
                                     >
                                         I'm a Supplier
@@ -163,6 +174,32 @@ const WaitlistModal: React.FC<WaitlistModalProps> = ({ isOpen, onClose, type }) 
                                             className="w-full px-4 py-2 border border-gray-200 rounded-lg focus:ring-2 focus:ring-amber-500 focus:border-transparent outline-none transition-all"
                                             placeholder="e.g. United Kingdom"
                                         />
+                                    </div>
+
+                                    <div>
+                                        <label htmlFor="phone" className="block text-sm font-medium text-gray-700 mb-1">Phone Number</label>
+                                        <div className="flex gap-2">
+                                            <select
+                                                value={countryCode}
+                                                onChange={(e) => setCountryCode(e.target.value)}
+                                                className="w-[140px] px-3 py-2 border border-gray-200 rounded-lg focus:ring-2 focus:ring-amber-500 focus:border-transparent outline-none transition-all bg-white text-sm truncate"
+                                            >
+                                                {countryCodes.map((c) => (
+                                                    <option key={`${c.code}-${c.country}`} value={c.code}>
+                                                        {c.flag} {c.code} ({c.country})
+                                                    </option>
+                                                ))}
+                                            </select>
+                                            <input
+                                                type="tel"
+                                                id="phone"
+                                                required
+                                                value={phoneNumber}
+                                                onChange={(e) => setPhoneNumber(e.target.value)}
+                                                className="flex-1 w-full px-4 py-2 border border-gray-200 rounded-lg focus:ring-2 focus:ring-amber-500 focus:border-transparent outline-none transition-all"
+                                                placeholder="123 456 7890"
+                                            />
+                                        </div>
                                     </div>
                                 </div>
 
