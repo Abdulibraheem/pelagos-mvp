@@ -1,5 +1,5 @@
 import React, { useState, useEffect } from 'react';
-import { Menu, X } from 'lucide-react';
+import { Menu, X, Hexagon } from 'lucide-react';
 
 interface NavigationProps {
     onOpenWaitlist: () => void;
@@ -24,19 +24,23 @@ const Navigation: React.FC<NavigationProps> = ({ onOpenWaitlist }) => {
         >
             <div className="container mx-auto px-6 flex justify-between items-center">
                 {/* Logo */}
-                <div className="text-2xl font-display font-bold text-pelagos-900 tracking-tight">
+                <div className={`flex items-center gap-2 text-2xl font-display font-bold tracking-tight ${isScrolled ? 'text-pelagos-900' : 'text-white'}`}>
+                    <Hexagon className="w-8 h-8 text-amber-500 fill-amber-500/20" strokeWidth={2.5} />
                     Pelagos
                 </div>
 
                 {/* Desktop Menu */}
                 <div className="hidden md:flex items-center space-x-8">
-                    <a href="#features" className="text-pelagos-800 hover:text-pelagos-500 font-medium transition-colors">Features</a>
-                    <a href="#how-it-works" className="text-pelagos-800 hover:text-pelagos-500 font-medium transition-colors">How it Works</a>
-                    <a href="#categories" className="text-pelagos-800 hover:text-pelagos-500 font-medium transition-colors">Categories</a>
+                    <a href="#features" className={`font-medium transition-colors ${isScrolled ? 'text-pelagos-800 hover:text-pelagos-500' : 'text-pelagos-100 hover:text-white'}`}>Features</a>
+                    <a href="#how-it-works" className={`font-medium transition-colors ${isScrolled ? 'text-pelagos-800 hover:text-pelagos-500' : 'text-pelagos-100 hover:text-white'}`}>How it Works</a>
+                    <a href="#categories" className={`font-medium transition-colors ${isScrolled ? 'text-pelagos-800 hover:text-pelagos-500' : 'text-pelagos-100 hover:text-white'}`}>Categories</a>
 
                     <button
                         onClick={onOpenWaitlist}
-                        className="bg-pelagos-900 text-white px-6 py-2.5 rounded-full font-medium hover:bg-pelagos-800 transition-all transform hover:scale-105 shadow-lg shadow-pelagos-900/20"
+                        className={`px-6 py-2.5 rounded-full font-medium transition-all transform hover:scale-105 shadow-lg ${isScrolled
+                            ? 'bg-pelagos-900 text-white hover:bg-pelagos-800 shadow-pelagos-900/20'
+                            : 'bg-white text-pelagos-900 hover:bg-pelagos-50 shadow-white/10'
+                            }`}
                     >
                         Get Early Access
                     </button>
@@ -44,7 +48,7 @@ const Navigation: React.FC<NavigationProps> = ({ onOpenWaitlist }) => {
 
                 {/* Mobile Menu Button */}
                 <button
-                    className="md:hidden text-pelagos-900"
+                    className={`md:hidden ${isScrolled ? 'text-pelagos-900' : 'text-white'}`}
                     onClick={() => setIsMobileMenuOpen(!isMobileMenuOpen)}
                 >
                     {isMobileMenuOpen ? <X size={24} /> : <Menu size={24} />}
