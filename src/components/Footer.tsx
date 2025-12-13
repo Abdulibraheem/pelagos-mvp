@@ -5,7 +5,7 @@ const Footer: React.FC = () => {
         <footer className="bg-pelagos-900 text-pelagos-200 py-12 border-t border-pelagos-800">
             <div className="container mx-auto px-6 flex flex-col md:flex-row justify-between items-center">
                 <div className="mb-6 md:mb-0 text-center md:text-left">
-                    <div className="text-2xl font-display font-bold text-white mb-2">Pelagos</div>
+                    <div className="text-2xl font-display font-bold text-white mb-2">Pelagos Trade</div>
                     <p className="text-sm font-light max-w-xs">
                         Connecting African potential with global opportunity.
                     </p>
@@ -18,7 +18,7 @@ const Footer: React.FC = () => {
                 </div>
 
                 <div className="mt-8 md:mt-0 text-xs text-pelagos-700">
-                    &copy; {new Date().getFullYear()} Pelagos. All rights reserved.
+                    &copy; {new Date().getFullYear()} Pelagos Trade. All rights reserved.
                 </div>
             </div>
         </footer>

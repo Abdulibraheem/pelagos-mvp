@@ -26,7 +26,7 @@ const Navigation: React.FC<NavigationProps> = ({ onOpenWaitlist }) => {
                 {/* Logo */}
                 <div className={`flex items-center gap-2 text-2xl font-display font-bold tracking-tight ${isScrolled ? 'text-pelagos-900' : 'text-white'}`}>
                     <Hexagon className="w-8 h-8 text-amber-500 fill-amber-500/20" strokeWidth={2.5} />
-                    Pelagos
+                    Pelagos Trade
                 </div>
 
                 {/* Desktop Menu */}
