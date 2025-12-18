@@ -32,7 +32,7 @@ const HowItWorks: React.FC = () => {
 
             <div className="container mx-auto px-6 relative z-10">
                 <div className="text-center mb-16">
-                    <h2 className="text-3xl md:text-5xl font-display font-bold mb-6">How PelaTrade Works</h2>
+                    <h2 className="text-3xl md:text-5xl font-display font-bold mb-6 text-white">How PelaTrade Works</h2>
                     <p className="text-pelatrade-200 text-lg max-w-2xl mx-auto font-light">
                         A streamlined process designed for international trade efficiency and security.
                     </p>
@@ -50,7 +50,7 @@ const HowItWorks: React.FC = () => {
                             <div className="absolute top-0 right-0 -mr-4 text-6xl font-display font-bold text-white/5 opacity-0 group-hover:opacity-100 transition-opacity select-none">
                                 {index + 1}
                             </div>
-                            <h3 className="text-xl font-bold mb-3">{step.title}</h3>
+                            <h3 className="text-xl font-bold mb-3 text-white">{step.title}</h3>
                             <p className="text-pelatrade-200/80 font-light text-sm leading-relaxed px-4">
                                 {step.description}
                             </p>
