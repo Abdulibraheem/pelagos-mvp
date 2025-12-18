@@ -32,7 +32,7 @@ const HowItWorks: React.FC = () => {
 
             <div className="container mx-auto px-6 relative z-10">
                 <div className="text-center mb-16">
-                    <h2 className="text-3xl md:text-5xl font-display font-bold mb-6">How Pelatrade Works</h2>
+                    <h2 className="text-3xl md:text-5xl font-display font-bold mb-6">How PelaTrade Works</h2>
                     <p className="text-pelatrade-200 text-lg max-w-2xl mx-auto font-light">
                         A streamlined process designed for international trade efficiency and security.
                     </p>
