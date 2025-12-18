@@ -17,7 +17,7 @@ function App() {
   };
 
   return (
-    <div className="min-h-screen bg-sand-50 font-sans text-gray-900 selection:bg-amber-200 selection:text-pelagos-900">
+    <div className="min-h-screen bg-sand-50 font-sans text-gray-900 selection:bg-amber-200 selection:text-pelatrade-900">
       <Navigation onOpenWaitlist={() => openWaitlist('buyer')} />
 
       <main>

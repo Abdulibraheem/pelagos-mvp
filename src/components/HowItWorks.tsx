@@ -26,32 +26,32 @@ const steps = [
 
 const HowItWorks: React.FC = () => {
     return (
-        <section id="how-it-works" className="py-24 bg-pelagos-900 text-white relative overflow-hidden">
+        <section id="how-it-works" className="py-24 bg-pelatrade-900 text-white relative overflow-hidden">
             {/* Background decoration */}
             <div className="absolute top-0 left-0 w-full h-full opacity-5 pattern-dots"></div>
 
             <div className="container mx-auto px-6 relative z-10">
                 <div className="text-center mb-16">
-                    <h2 className="text-3xl md:text-5xl font-display font-bold mb-6">How Pelagos Trade Works</h2>
-                    <p className="text-pelagos-200 text-lg max-w-2xl mx-auto font-light">
+                    <h2 className="text-3xl md:text-5xl font-display font-bold mb-6">How Pelatrade Works</h2>
+                    <p className="text-pelatrade-200 text-lg max-w-2xl mx-auto font-light">
                         A streamlined process designed for international trade efficiency and security.
                     </p>
                 </div>
 
                 <div className="grid md:grid-cols-4 gap-8 relative">
                     {/* Connector Line (Desktop) */}
-                    <div className="hidden md:block absolute top-12 left-0 w-full h-0.5 bg-pelagos-700/50 -z-10"></div>
+                    <div className="hidden md:block absolute top-12 left-0 w-full h-0.5 bg-pelatrade-700/50 -z-10"></div>
 
                     {steps.map((step, index) => (
                         <div key={index} className="relative flex flex-col items-center text-center group">
-                            <div className="w-24 h-24 rounded-full bg-pelagos-800 border-4 border-pelagos-900 flex items-center justify-center mb-6 z-10 group-hover:bg-amber-500 transition-colors duration-300 shadow-xl">
+                            <div className="w-24 h-24 rounded-full bg-pelatrade-800 border-4 border-pelatrade-900 flex items-center justify-center mb-6 z-10 group-hover:bg-amber-500 transition-colors duration-300 shadow-xl">
                                 {step.icon}
                             </div>
                             <div className="absolute top-0 right-0 -mr-4 text-6xl font-display font-bold text-white/5 opacity-0 group-hover:opacity-100 transition-opacity select-none">
                                 {index + 1}
                             </div>
                             <h3 className="text-xl font-bold mb-3">{step.title}</h3>
-                            <p className="text-pelagos-200/80 font-light text-sm leading-relaxed px-4">
+                            <p className="text-pelatrade-200/80 font-light text-sm leading-relaxed px-4">
                                 {step.description}
                             </p>
                         </div>

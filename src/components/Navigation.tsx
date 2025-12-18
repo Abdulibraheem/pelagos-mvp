@@ -24,22 +24,22 @@ const Navigation: React.FC<NavigationProps> = ({ onOpenWaitlist }) => {
         >
             <div className="container mx-auto px-6 flex justify-between items-center">
                 {/* Logo */}
-                <div className={`flex items-center gap-2 text-2xl font-display font-bold tracking-tight ${isScrolled ? 'text-pelagos-900' : 'text-white'}`}>
+                <div className={`flex items-center gap-2 text-2xl font-display font-bold tracking-tight ${isScrolled ? 'text-pelatrade-900' : 'text-white'}`}>
                     <Hexagon className="w-8 h-8 text-amber-500 fill-amber-500/20" strokeWidth={2.5} />
-                    Pelagos Trade
+                    Pelatrade
                 </div>
 
                 {/* Desktop Menu */}
                 <div className="hidden md:flex items-center space-x-8">
-                    <a href="#features" className={`font-medium transition-colors ${isScrolled ? 'text-pelagos-800 hover:text-pelagos-500' : 'text-pelagos-100 hover:text-white'}`}>Features</a>
-                    <a href="#how-it-works" className={`font-medium transition-colors ${isScrolled ? 'text-pelagos-800 hover:text-pelagos-500' : 'text-pelagos-100 hover:text-white'}`}>How it Works</a>
-                    <a href="#categories" className={`font-medium transition-colors ${isScrolled ? 'text-pelagos-800 hover:text-pelagos-500' : 'text-pelagos-100 hover:text-white'}`}>Categories</a>
+                    <a href="#features" className={`font-medium transition-colors ${isScrolled ? 'text-pelatrade-800 hover:text-pelatrade-500' : 'text-pelatrade-100 hover:text-white'}`}>Features</a>
+                    <a href="#how-it-works" className={`font-medium transition-colors ${isScrolled ? 'text-pelatrade-800 hover:text-pelatrade-500' : 'text-pelatrade-100 hover:text-white'}`}>How it Works</a>
+                    <a href="#categories" className={`font-medium transition-colors ${isScrolled ? 'text-pelatrade-800 hover:text-pelatrade-500' : 'text-pelatrade-100 hover:text-white'}`}>Categories</a>
 
                     <button
                         onClick={onOpenWaitlist}
                         className={`px-6 py-2.5 rounded-full font-medium transition-all transform hover:scale-105 shadow-lg ${isScrolled
-                            ? 'bg-pelagos-900 text-white hover:bg-pelagos-800 shadow-pelagos-900/20'
-                            : 'bg-white text-pelagos-900 hover:bg-pelagos-50 shadow-white/10'
+                            ? 'bg-pelatrade-900 text-white hover:bg-pelatrade-800 shadow-pelatrade-900/20'
+                            : 'bg-white text-pelatrade-900 hover:bg-pelatrade-50 shadow-white/10'
                             }`}
                     >
                         Get Early Access
@@ -48,7 +48,7 @@ const Navigation: React.FC<NavigationProps> = ({ onOpenWaitlist }) => {
 
                 {/* Mobile Menu Button */}
                 <button
-                    className={`md:hidden ${isScrolled ? 'text-pelagos-900' : 'text-white'}`}
+                    className={`md:hidden ${isScrolled ? 'text-pelatrade-900' : 'text-white'}`}
                     onClick={() => setIsMobileMenuOpen(!isMobileMenuOpen)}
                 >
                     {isMobileMenuOpen ? <X size={24} /> : <Menu size={24} />}
@@ -61,21 +61,21 @@ const Navigation: React.FC<NavigationProps> = ({ onOpenWaitlist }) => {
                     <div className="flex flex-col space-y-4">
                         <a
                             href="#features"
-                            className="text-lg font-medium text-pelagos-800"
+                            className="text-lg font-medium text-pelatrade-800"
                             onClick={() => setIsMobileMenuOpen(false)}
                         >
                             Features
                         </a>
                         <a
                             href="#how-it-works"
-                            className="text-lg font-medium text-pelagos-800"
+                            className="text-lg font-medium text-pelatrade-800"
                             onClick={() => setIsMobileMenuOpen(false)}
                         >
                             How it Works
                         </a>
                         <a
                             href="#categories"
-                            className="text-lg font-medium text-pelagos-800"
+                            className="text-lg font-medium text-pelatrade-800"
                             onClick={() => setIsMobileMenuOpen(false)}
                         >
                             Categories

@@ -7,7 +7,7 @@ export default {
   theme: {
     extend: {
       colors: {
-        pelagos: {
+        pelatrade: {
           900: '#1A3C34', // Deep Forest Green (Primary)
           800: '#2F4F4F',
           700: '#3D5C5C',

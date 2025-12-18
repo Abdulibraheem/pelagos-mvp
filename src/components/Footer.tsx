@@ -2,10 +2,10 @@ import React from 'react';
 
 const Footer: React.FC = () => {
     return (
-        <footer className="bg-pelagos-900 text-pelagos-200 py-12 border-t border-pelagos-800">
+        <footer className="bg-pelatrade-900 text-pelatrade-200 py-12 border-t border-pelatrade-800">
             <div className="container mx-auto px-6 flex flex-col md:flex-row justify-between items-center">
                 <div className="mb-6 md:mb-0 text-center md:text-left">
-                    <div className="text-2xl font-display font-bold text-white mb-2">Pelagos Trade</div>
+                    <div className="text-2xl font-display font-bold text-white mb-2">Pelatrade</div>
                     <p className="text-sm font-light max-w-xs">
                         Connecting African potential with global opportunity.
                     </p>
@@ -17,8 +17,8 @@ const Footer: React.FC = () => {
                     <a href="#" className="hover:text-white transition-colors">Contact Support</a>
                 </div>
 
-                <div className="mt-8 md:mt-0 text-xs text-pelagos-700">
-                    &copy; {new Date().getFullYear()} Pelagos Trade. All rights reserved.
+                <div className="mt-8 md:mt-0 text-xs text-pelatrade-700">
+                    &copy; {new Date().getFullYear()} Pelatrade. All rights reserved.
                 </div>
             </div>
         </footer>

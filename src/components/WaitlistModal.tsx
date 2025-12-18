@@ -99,13 +99,13 @@ const WaitlistModal: React.FC<WaitlistModalProps> = ({ isOpen, onClose, type }) 
                             <div className="w-16 h-16 bg-green-100 text-green-600 rounded-full flex items-center justify-center mb-4">
                                 <CheckCircle size={32} />
                             </div>
-                            <h3 className="text-2xl font-display font-bold text-pelagos-900 mb-2">You're on the list!</h3>
+                            <h3 className="text-2xl font-display font-bold text-pelatrade-900 mb-2">You're on the list!</h3>
                             <p className="text-gray-600">We'll be in touch soon with your early access invite.</p>
                         </div>
                     ) : (
                         <>
                             <div className="mb-6">
-                                <h3 className="text-2xl font-display font-bold text-pelagos-900 mb-2">Join the Waitlist</h3>
+                                <h3 className="text-2xl font-display font-bold text-pelatrade-900 mb-2">Join the Waitlist</h3>
                                 <p className="text-gray-600 font-light text-sm">
                                     Be among the first to access global African trade.
                                 </p>
@@ -118,7 +118,7 @@ const WaitlistModal: React.FC<WaitlistModalProps> = ({ isOpen, onClose, type }) 
                                         type="button"
                                         onClick={() => setUserType('buyer')}
                                         className={`nav-btn py-2 text-sm font-medium rounded-md transition-all ${userType === 'buyer'
-                                            ? 'bg-white text-pelagos-900 shadow-sm'
+                                            ? 'bg-white text-pelatrade-900 shadow-sm'
                                             : 'text-gray-500 hover:text-gray-700'
                                             }`}
                                     >
@@ -128,7 +128,7 @@ const WaitlistModal: React.FC<WaitlistModalProps> = ({ isOpen, onClose, type }) 
                                         type="button"
                                         onClick={() => setUserType('supplier')}
                                         className={`nav-btn py-2 text-sm font-medium rounded-md transition-all ${userType === 'supplier'
-                                            ? 'bg-white text-pelagos-900 shadow-sm'
+                                            ? 'bg-white text-pelatrade-900 shadow-sm'
                                             : 'text-gray-500 hover:text-gray-700'
                                             }`}
                                     >
@@ -212,7 +212,7 @@ const WaitlistModal: React.FC<WaitlistModalProps> = ({ isOpen, onClose, type }) 
                                 <button
                                     type="submit"
                                     disabled={status === 'loading'}
-                                    className="w-full mt-6 py-3 bg-pelagos-900 text-white rounded-lg font-semibold hover:bg-pelagos-800 transition-colors shadow-lg shadow-pelagos-900/20 disabled:opacity-70 disabled:cursor-not-allowed flex items-center justify-center"
+                                    className="w-full mt-6 py-3 bg-pelatrade-900 text-white rounded-lg font-semibold hover:bg-pelatrade-800 transition-colors shadow-lg shadow-pelatrade-900/20 disabled:opacity-70 disabled:cursor-not-allowed flex items-center justify-center"
                                 >
                                     {status === 'loading' ? (
                                         <Loader2 className="w-5 h-5 animate-spin" />

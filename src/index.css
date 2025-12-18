@@ -9,6 +9,6 @@
     @apply font-body text-gray-800 bg-sand-50;
   }
   h1, h2, h3, h4, h5, h6 {
-    @apply font-display text-pelagos-900;
+    @apply font-display text-pelatrade-900;
   }
 }
