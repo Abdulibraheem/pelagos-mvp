@@ -17,7 +17,7 @@ const Hero: React.FC<HeroProps> = ({ onOpenWaitlist }) => {
                 <div className="space-y-8 animate-in slide-in-from-left duration-700">
                     <div className="inline-flex items-center space-x-2 px-3 py-1 rounded-full bg-pelatrade-800/50 border border-pelatrade-700 text-pelatrade-100 text-sm">
                         <span className="w-2 h-2 rounded-full bg-amber-500 animate-pulse"></span>
-                        <span>Launching Q2 2026</span>
+                        <span>Launching Q1 2026</span>
                     </div>
 
                     <h1 className="text-5xl md:text-7xl font-display font-bold text-white leading-tight">
