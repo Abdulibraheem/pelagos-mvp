@@ -14,7 +14,7 @@ const Footer: React.FC = () => {
                 <div className="flex flex-col md:flex-row items-center space-y-4 md:space-y-0 md:space-x-8 text-sm font-light">
                     <a href="#" className="hover:text-white transition-colors">Privacy Policy</a>
                     <a href="#" className="hover:text-white transition-colors">Terms of Service</a>
-                    <a href="mailto:support@pelatrade.com" className="hover:text-white transition-colors">Contact Support</a>
+                    <a href="mailto:support@pelatrade.com" className="hover:text-white transition-colors">support@pelatrade.com</a>
                 </div>
 
                 <div className="mt-8 md:mt-0 text-xs text-pelatrade-700">
